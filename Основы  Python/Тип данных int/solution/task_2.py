@@ -1,8 +1,4 @@
-str
-
-
-def __add__(self, *args, **kwargs): # real signature unknown
-    """ Return self+value. """
-    # она возвращает себя и справа подставляет второе значение, соеденяет строки
-    pass
-
+import random
+number = random.randint(1, 100)
+is_even = number % 2 == 0
+print(f"Число {number} четное? {is_even}")
