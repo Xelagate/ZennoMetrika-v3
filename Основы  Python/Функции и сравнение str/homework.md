@@ -64,10 +64,3 @@ eligable_addresses = """0x295e26495cef6f69dfa69911d9d8e4f3bbadb89b
 0xecfde19b589b57b6caf5dc5ac64e31590ac99dc0"""
 ```
 
-
-## Задача 2 - lite
-### Условие:
-
-
-
-
