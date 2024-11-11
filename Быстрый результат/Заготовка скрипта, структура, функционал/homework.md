@@ -50,10 +50,10 @@
 
 Возьмите заготовку скрипта: https://github.com/MaxZarev/The-Template
 
-У Вас имеется список DEX бирж:
-1. Uniswap
-2. Sushiswap
-3. Pancakeswap
+У Вас имеется список DEX бирж (названия и ссылки):
+1. Uniswap - https://app.uniswap.org/
+2. Sushiswap - https://app.sushi.com/
+3. Pancakeswap - https://pancakeswap.finance/
 
 Доработайте функцию activity, чтобы скрипт:
 
