@@ -53,7 +53,7 @@ if tx_counter < 5:
     # если баланса не хватает на активность, делаем вывод с биржи
     if balance < activity_price:
         print('Баланса не хватает')
-        withdrawal = random.randint(1, 2)
+        withdrawal = random.randint(2, 3)
         print(f"делаем вывод с биржи: {withdrawal}")
         balance += withdrawal
 
@@ -74,7 +74,7 @@ if tx_counter < 5:
         # если баланса не хватает на активность, делаем вывод с биржи
         if balance < activity_price:
             print('Баланса не хватает')
-            withdrawal = random.randint(1, 2)
+            withdrawal = random.randint(2, 3)
             print(f"делаем вывод с биржи: {withdrawal}")
             balance += withdrawal
 
@@ -95,7 +95,7 @@ if tx_counter < 5:
             # если баланса не хватает на активность, делаем вывод с биржи
             if balance < activity_price:
                 print('Баланса не хватает')
-                withdrawal = random.randint(1, 2)
+                withdrawal = random.randint(2, 3)
                 print(f"делаем вывод с биржи: {withdrawal}")
                 balance += withdrawal
 
@@ -116,7 +116,7 @@ if tx_counter < 5:
                 # если баланса не хватает на активность, делаем вывод с биржи
                 if balance < activity_price:
                     print('Баланса не хватает')
-                    withdrawal = random.randint(1, 2)
+                    withdrawal = random.randint(2, 3)
                     print(f"делаем вывод с биржи: {withdrawal}")
                     balance += withdrawal
 
