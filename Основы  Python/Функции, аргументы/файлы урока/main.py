@@ -1,48 +1,56 @@
-# # функции и методы
+from __future__ import annotations
+
 import random
 
-#
-# tokens = ["USDT", "ETH", "BNB"]
-#
-# len_list = len(tokens)
-#
-# len_list = 0
-# for token in tokens:
-#     len_list += 1
-# print(len_list)
-#
-#
-# tokens.append("BTC")
-print("Перед функцией")
-
-
-# def print_random_gas():
-#     """
-#     Функция генерирует случайное число от 10 до 50
-#     и печатает в терминале
-#     :return: None
-#     """
-#     global gas_price
-#     gas_price = random.randint(10, 50)
-#     print(gas_price)
-
-def print_random_gas(min_gas, max_gas):
+def withdraw_token(address: str) -> float:
     """
-    Функция генерирует случайное число от 10 до 50
-    и печатает в терминале
-    :param min_gas: минимальное значение
-    :param max_gas: максимальное значение
-    :return: None
+    Вывод токенов с кошелька
+    :param address:  адрес кошелька
+    :return: количество токенов
     """
-    gas_price = random.randint(min_gas, max_gas)
-    print(gas_price)
+
+    random_amount = random.uniform(0, 5)
+    print(f"Кошелек {address} выводит {random_amount} токенов") # выводим количество токенов
+    return random_amount # возвращаем количество токенов
+
+def check_balance(address: str) -> float:
+    balance = random.uniform(0, 10)
+    print(f"Баланс кошелька {address}: {balance}")
+    return balance
+
+def check_and_withdraw(address: str, min_balance: float) -> float:
+    if min_balance < 0:
+        return
+
+    balance = check_balance(address)
+    if balance < min_balance:
+        print(f"Кошелек {address} не прошел проверку на минимальный баланс")
+        withdraw_amount = withdraw_token(address)
+        balance += withdraw_amount
+        print(f"Итоговый балансы кошелька {address} - {balance}")
+
+    return balance
+
+# программа
 
 
-gas_price = 0
+min_balance = 1.0
+address = "0x1234"
+balance = check_and_withdraw(address, min_balance)
 
-print("Запускаем в работу")
-print_random_gas(min_gas=10, max_gas=50)
-print("Работаем")
-print_random_gas(min_gas="50", max_gas="70")
+print(f"Итоговый баланс кошелька {address}: {balance}")
 
-print("Завершаем работу")
+
+# def generate_password(length: int, symbols: str) -> str:
+#     symbols_upper = symbols.upper()
+#     password = ""
+#     for _ in range(length):
+#         password += random.choice(symbols+symbols_upper)
+#     return password
+#
+#
+#
+# password = generate_password(length=10, symbols="sdfjksndfkjsdnfkjsd")
+
+
+# print(f"Сгенерированный пароль вне функции: {password}, длина пароля: {len(password)}")
