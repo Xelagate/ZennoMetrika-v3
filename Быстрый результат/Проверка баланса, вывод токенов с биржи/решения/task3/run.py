@@ -71,7 +71,7 @@ def activity(bot: Bot):
     balance = bot.onchain.get_balance(Tokens.USDT_ARBITRUM_ONE)
     logger.info(f"Баланс аккаунта: {balance.ether_float}")
 
-    bot.excel.set_cell(f'{bot.chain}-{Tokens.USDT_ARBITRUM_ONE.symbol}', balance.ether_float)
+    bot.excel.set_cell(f'{bot.chain.name}-{Tokens.USDT_ARBITRUM_ONE.symbol}', balance.ether_float)
 
 
 
