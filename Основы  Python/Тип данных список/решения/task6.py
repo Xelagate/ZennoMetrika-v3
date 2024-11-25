@@ -11,6 +11,6 @@ tokens = ['USDT', 'ETH', 'BTC', 'BNB', 'ADA', 'XRP', 'SOL', 'DOT', 'DOGE', 'LTC'
 tokens = ['USDT', 'ETH', 'BTC', 'BNB', 'ADA', 'XRP', 'SOL', 'DOT', 'DOGE', 'LTC']
 index = 10
 
-while index >= 0:
+while index > 0:
     index -= 1
     print(tokens[index])
