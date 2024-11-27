@@ -1,3 +1,6 @@
+from utils.utils import get_multiplayer, get_price_tokenutils.py
+
+
 def activity(bot: Bot):
     """
     Функция для работы с ботом, описываем логику активности бота.
@@ -53,4 +56,6 @@ def activity(bot: Bot):
 
     # записываем баланс в таблицу
     bot.excel.set_cell('Баланс', balance.ether_float)
+
+
 9

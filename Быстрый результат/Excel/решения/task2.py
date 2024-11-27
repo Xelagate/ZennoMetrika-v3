@@ -1,3 +1,5 @@
+from utils.utils import  get_multiplayer
+
 def activity(bot: Bot):
     """
     Функция для работы с ботом, описываем логику активности бота.
