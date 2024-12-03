@@ -63,4 +63,4 @@ def activity(bot: Bot):
         # увеличиваем локальный счетчик, чтобы снизить количество запросов к excel
         counter_tx[dex] += 1
         # записываем в excel таблицу количество транзакций по аккаунту + 1
-        bot.excel.set_counter(dex)
+        bot.excel.increase_counter(dex)
