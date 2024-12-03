@@ -53,7 +53,7 @@ def activity(bot: Bot):
         # выбираем рандомный декс из списка
         dex = random.choice(work_dexes)
         # открываем сайт выбранного декса
-        bot.ads.open_browser(dexes[dex])
+        bot.ads.open_url(dexes[dex])
         # делаем паузу от 5 до 10 секунд
         random_sleep(5, 10)
         # выводим в терминале информацию о транзакции
