@@ -33,7 +33,7 @@ def activity(bot: Bot):
             logger.info(f'Баланс {balance.ether_float} {native_token} в сети {chain.name} вывели с биржи')
         elif balance_usd > 100:
             # вычисляем сумму вывода на биржу, с рандомным коэффициентом
-            amount = (balance_usd - 100) * random.uniform(1.1, 1.2)
+            amount = (balance_usd - 100) * random.uniform(1.1, 1.2) / price
             # отправляем баланс на суб аккаунт биржи
             bot.onchain.send_token(amount=amount, to_address=sub_address)
             logger.info(f'Баланс {balance.ether_float} {native_token} в сети {chain.name} отправлен на адрес {sub_address}')
